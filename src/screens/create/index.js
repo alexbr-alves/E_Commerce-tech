@@ -43,11 +43,11 @@ export default function Create() {
                  />
             </View>
 
-            <TouchableOpacity style={styles.validate} onPress={() => {navigation.navigate('Home')}}>
+            <TouchableOpacity style={styles.validate} onPress={() => {navigation.navigate('HomeScreen')}}>
                 <Text style={styles.validate__text}>Validate</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity  onPress={() => {navigation.navigate('Home')}}>
+            <TouchableOpacity  onPress={() => {navigation.navigate('HomeScreen')}}>
                 <Text style={styles.haveAccount}>Already have an account? Login</Text>
            </TouchableOpacity>
 

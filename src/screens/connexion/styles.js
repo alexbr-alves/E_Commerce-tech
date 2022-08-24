@@ -8,7 +8,7 @@ export default StyleSheet.create({
     },
     title:{
         color: '#ffffff',
-        marginTop: 67,
+        marginTop: 27,
         alignSelf: 'center',
         fontFamily: 'Roboto_700Bold',
         fontSize: 24, 

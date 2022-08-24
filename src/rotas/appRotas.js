@@ -10,25 +10,42 @@ import Intro4 from '../screens/intro4';
 import Connexion from '../screens/connexion';
 import Create from '../screens/create'
 import Login from '../screens/login'
-import Home from '../screens/home'
+import Categories from '../screens/categories';
+import Produtos from '../screens/produtos';
+import HomeRotas from './homeRotas';
 
 
 
 const Stack = createNativeStackNavigator();
 export default function AppRotas(){
-
     return(
         <NavigationContainer >
-        <Stack.Navigator >
-          <Stack.Screen name="Intro1" component={Intro1} options={{
+        <Stack.Navigator>
+
+        <Stack.Screen name="HomeScreen" component={HomeRotas} options={{
+           title: '',
+           headerShown: false
+            }}/>
+
+          <Stack.Screen name="Categories" component={Categories}  options={{
+           title: '',
+           headerShown: false,
+            }}/>
+
+          <Stack.Screen name="Produtos" component={Produtos} options={{
+           title: '',
+           headerShown: false,
+            }}/>
+
+
+          <Stack.Screen name="Intro1" component={Intro1}  options={{
             title: '',
             headerShown: false
             }} />
        
-          
             <Stack.Screen name="Intro2" component={Intro2} options={{
            title: '',
-           headerShown: false
+           headerShown: false,
             }}/>
 
             <Stack.Screen name="Intro3" component={Intro3} options={{
@@ -45,8 +62,7 @@ export default function AppRotas(){
            title: '',
            headerShown: false
             }}/>
-
-            
+ 
           <Stack.Screen name="Create" component={Create} options={{
            title: '',
            headerShown: false
@@ -57,11 +73,7 @@ export default function AppRotas(){
            headerShown: false
             }}/>
 
-          <Stack.Screen name="Home" component={Home} options={{
-           title: '',
-           headerShown: false
-            }}/>
-
+         
         </Stack.Navigator>
       </NavigationContainer>
     )

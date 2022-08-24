@@ -33,7 +33,7 @@ export default function Login() {
                  />
             </View>
 
-            <TouchableOpacity style={styles.validate}  onPress={() => {navigation.navigate('Home')}}>
+            <TouchableOpacity style={styles.validate}  onPress={() => {navigation.navigate('HomeScreen')}}>
                 <Text style={styles.validate__text}>Validate</Text>
             </TouchableOpacity>
 

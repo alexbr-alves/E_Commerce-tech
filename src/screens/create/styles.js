@@ -12,7 +12,7 @@ export default StyleSheet.create({
         lineHeight: 29,
         alignSelf: 'center',
         color: '#ffffff',
-        marginTop: 67
+        marginTop: 27
     },
     name: {
         marginHorizontal: 48,

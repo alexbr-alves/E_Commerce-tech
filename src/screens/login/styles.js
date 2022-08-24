@@ -12,7 +12,7 @@ export default StyleSheet.create({
         lineHeight: 29,
         alignSelf: 'center',
         color: '#ffffff',
-        marginTop: 27
+        marginTop: 67
     },
     
     email: {

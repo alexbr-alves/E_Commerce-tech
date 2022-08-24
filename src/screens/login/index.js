@@ -10,7 +10,7 @@ export default function Login() {
     const navigation = useNavigation();
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Create an account</Text>
+            <Text style={styles.title}>Login</Text>
 
 
             <View style={styles.email}>

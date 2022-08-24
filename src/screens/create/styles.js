@@ -1,5 +1,5 @@
-import { Roboto_700Bold } from "@expo-google-fonts/roboto";
-import { StyleSheet } from "react-native";
+
+import { StyleSheet, Platform } from "react-native";
 
 export default StyleSheet.create({
     container: {
@@ -12,7 +12,7 @@ export default StyleSheet.create({
         lineHeight: 29,
         alignSelf: 'center',
         color: '#ffffff',
-        marginTop: 27
+        marginTop: 67,
     },
     name: {
         marginHorizontal: 48,

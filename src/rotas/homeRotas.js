@@ -1,51 +1,40 @@
-import * as React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/AntDesign';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Home from '../screens/home/index'
-import Car from '../screens/car/index';
-import Seach from '../screens/seach/index';
-import User from '../screens/user';
+import Home from '../screens/home';
+import Categories from '../screens/categories';
+import Catalogo from '../screens/catalogo';
+import Produto from '../screens/produto.js';
 
-import AppRotas from './appRotas';
 
-const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
-export default function HomeRotas() {
- 
-  return (
-    
-      <Tab.Navigator  screenOptions={({route}) => ({
-        tabBarStyle: {
-            height: 73,
-            backgroundColor: '#EFF5FB'
-        },
-        headerShown: false,
-        tabBarInactiveTintColor: '#0A1034',
-        tabBarActiveTintColor: '#0001fc',
-        tabBarIcon: ({ color, size}) => {
-            let iconName;
-            if(route.name === 'Home'){iconName = 'home'}
-            else if(route.name === 'Seach'){iconName = 'search1'}
-            else if(route.name === 'Car'){iconName = 'shoppingcart'}
-            else if(route.name === 'User'){iconName = 'user'}
-            return <Icon name={iconName} color={color} size={size}/>
-        }
-      })}
-        
-      >
-        <Tab.Screen name="Home" component={Home} options={{
-            title: '', tabBarStyle: true }}/>
+export default function HomeRotas(){
+    return(
+       
+        <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home}  options={{
+            title: '',
+            headerShown: false
+            }} />
+       
+            <Stack.Screen name="Categories" component={Categories} options={{
+           title: '',
+           headerShown: false,
+            }}/>
 
-        <Tab.Screen name="Seach" component={Seach} options={{
-            title: '', }} />
+            <Stack.Screen name="Catalogo" component={Catalogo} options={{
+           title: '',
+           headerShown: false
+            }}/>
 
-        <Tab.Screen name="Car" component={Car} options={{
-            title: '',  }}  />
-        
-        <Tab.Screen name="User" component={User} options={{
-            title: '',  }}  />
-      </Tab.Navigator>
-    
-  );
+            <Stack.Screen name="Produto" component={Produto} options={{
+           title: '',
+           headerShown: false
+            }}/>
+
+        </Stack.Navigator>
+      
+    )
 }

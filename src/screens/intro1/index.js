@@ -6,6 +6,7 @@ import fundo from '../../../assets/images/intro1.jpg'
 
 
 export default function Intro1(){
+    
     const navigation = useNavigation();
     return(
         <ImageBackground source={fundo} resizeMode={'cover'} style={styles.container}>

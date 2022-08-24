@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 export default StyleSheet.create({
     container: {
@@ -8,7 +8,7 @@ export default StyleSheet.create({
     },
     title:{
         color: '#ffffff',
-        marginTop: 27,
+        marginTop: 67,
         alignSelf: 'center',
         fontFamily: 'Roboto_700Bold',
         fontSize: 24, 

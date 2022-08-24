@@ -7,7 +7,7 @@ export default StyleSheet.create({
         position: 'absolute'
     },
     text:{
-        marginTop: Platform.OS === 'android'? 690 : 780,
+        marginTop: Platform.OS === 'android'? 720 : 780,
         alignSelf: 'center',
         fontFamily: 'Roboto_700Bold',
         fontSize: 18, 

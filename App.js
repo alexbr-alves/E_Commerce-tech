@@ -1,12 +1,13 @@
 import React, { useCallback } from 'react';
 import { useFonts } from 'expo-font';
-import { StatusBar} from 'react-native';
+
+import { InfoProvider } from './src/contexts/CarrinhoContext';
 
 import {SplashScreen} from 'expo-splash-screen'
 import { Roboto_700Bold, Roboto_500Medium, Roboto_400Regular, Roboto_900Black } from '@expo-google-fonts/roboto';
 
-import AppRotas from './src/rotas/appRotas'
 
+import AppRotas from './src/rotas/appRotas';
 export default function App() {
   let [fontsLoaded, error] = useFonts({
     Roboto_700Bold,
@@ -23,10 +24,9 @@ export default function App() {
       return null
     }
   return (
-    <>
-    <StatusBar/>
-    <AppRotas/>
-    </>
+    <InfoProvider>
+      <AppRotas/>
+    </InfoProvider>
   );
 }
 

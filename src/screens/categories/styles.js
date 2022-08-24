@@ -6,7 +6,7 @@ export default StyleSheet.create({
 
     },
     iconBack: {
-        marginTop: 20,
+        marginTop: 64,
         marginLeft: 20
     },
     title :{

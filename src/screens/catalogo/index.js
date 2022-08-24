@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Image, Text, TouchableOpacity, FlatList, SafeAreaView } from "react-native";
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import styles from './styles';
 
 import iconBack from '../../../assets/images/iconBack.png'
@@ -11,9 +11,10 @@ import iconVector from '../../../assets/images/iconVector.png'
 import computers from '../../mocks/computers';
 import smartphones from '../../mocks/smartphone'
 
-export default function Produtos({navigation: {goBack}}) {
+export default function Catalogo({navigation: {goBack}}) {
     const route = useRoute();
     const [produtos, setProdutos] = useState([]);
+    const navigation = useNavigation();
 
 
     if(route.params.categoria === 'Laptop'){
@@ -50,7 +51,9 @@ export default function Produtos({navigation: {goBack}}) {
         key={({id}, index) => id}
         numColumns={2}
         renderItem={({item}) => (
-            <TouchableOpacity style={styles.card}>
+            <TouchableOpacity style={styles.card} onPress={() => {navigation.navigate('Produto', {
+                name: item.name, price: item.price, image: item.image
+            })}}>
             <Image style={ route.params.categoria === 'Smartphone'? styles.imageSmart : styles.image} source={item.image}/>
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.price}>USD {item.price}</Text>

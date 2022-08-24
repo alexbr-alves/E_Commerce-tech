@@ -1,12 +1,11 @@
-import { Roboto_700Bold } from "@expo-google-fonts/roboto";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 export default StyleSheet.create({
     container: {
         backgroundColor:  '#fdfeff'
     },
     title: {
-        marginTop: 16,
+        marginTop: Platform.OS === 'ios'? 30 : 42,
         marginLeft: 16,
         color: '#0A1034',
         fontFamily: 'Roboto_900Black',

@@ -17,11 +17,11 @@ export default function Connexion(){
                 <Image source={cta} style={styles.cta}/>
            </TouchableOpacity>
 
-           <TouchableOpacity onPress={() => {navigation.navigate('HomeScreen')}}>
+           <TouchableOpacity onPress={() => {navigation.navigate('TabRotas')}}>
                 <Image source={google} style={styles.google}/>
            </TouchableOpacity>
 
-           <TouchableOpacity onPress={() => {navigation.navigate('HomeScreen')}}>
+           <TouchableOpacity onPress={() => {{navigation.navigate('TabRotas')} }}>
                 <Image source={facebook} style={styles.facebook}/>
            </TouchableOpacity>
 

@@ -1,5 +1,4 @@
-import { Roboto_700Bold } from "@expo-google-fonts/roboto";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 
 
 export default StyleSheet.create({
@@ -8,7 +7,7 @@ export default StyleSheet.create({
         backgroundColor: '#FDFEFF'
     },
     iconBack: {
-        marginTop: 20,
+        marginTop: Platform.OS === 'ios'? 20 : 60,
         marginLeft: 20
     },
     title: {

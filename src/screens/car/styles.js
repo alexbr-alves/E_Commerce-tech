@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     container: {
-       
+       //paddingBottom: 150
     },
     title: {
         marginTop: 56,
@@ -52,12 +52,19 @@ export default StyleSheet.create({
         color: '#0A1034'
     },
     price: {
-        marginLeft: 20,
+        marginLeft: 16,
          marginTop: 4,
         fontFamily: 'Roboto_500Medium',
         fontSize: 14,
         lineHeight: 17,
         color: '#0001fc'
+    },
+    cores: {
+        marginLeft: 16,
+        fontFamily: 'Roboto_400Regular',
+        fontSize: 10,
+        lineHeight: 12,
+        color: '#a7a9be'
     },
     descripts: {
         marginTop: 40,
@@ -109,14 +116,15 @@ export default StyleSheet.create({
         borderRadius: 6,
     },
 
-   buttom__text: {
-    color: '#ffffff',
-    fontFamily: 'Roboto_700Bold',
-    fontSize: 18,
-    lineHeight: 21
+    buttom__text: {
+        color: '#ffffff',
+        fontFamily: 'Roboto_700Bold',
+        fontSize: 18,
+        lineHeight: 21,
    },
-   modal: {
-    height: '100%',
-    width: '100%'
-   }
+    modal: {
+        height: '100%',
+        width: '100%'
+   },
+    
 })

@@ -1,21 +1,19 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useContext, useState, useEffect } from "react";
-import { View, Text, FlatList, Image, TouchableOpacity, Modal } from "react-native";
+import React, { useContext, useState } from "react";
+import { View, Text, FlatList, Image, TouchableOpacity, ScrollView } from "react-native";
 import { CarrinhoContext } from "../../contexts/CarrinhoContext";
 import styles from "./styles";
 
 
 export default function Car(){
    const {carrinho, total, limparCarrinho} = useContext(CarrinhoContext);
-   const [modalVisivel, setModalVisivel] = useState(false);
    const navigation = useNavigation();
    
    
    
-
     return(
         
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             {total != 0? 
             <>
             <Text style={styles.title}>Checkout</Text>
@@ -58,10 +56,12 @@ export default function Car(){
                         </View>
                     </View>
                 </View>
-
+                <View style={{paddingBottom: 30}}>    
                 <TouchableOpacity style={styles.buttom} onPress={() =>{ {navigation.navigate('Tracking')} {limparCarrinho()}}}>
                     <Text style={styles.buttom__text}>Pay</Text>
                 </TouchableOpacity>
+                </View>
+
                 </>
                :
               
@@ -69,7 +69,7 @@ export default function Car(){
             }
             
 
-        </View>
+        </ScrollView>
     )
       
 }

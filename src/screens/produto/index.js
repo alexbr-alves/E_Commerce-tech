@@ -56,24 +56,25 @@ export default function Produto({navigation: {goBack}}){
                    {setIcon1(false)} {setIcon2(false)}{setIcon3(false)}{setIcon4(true)}
                 }}></TouchableOpacity>
             </View>
-            <Text style={styles.capacity__title}>Capacity</Text>
+            <Text style={styles.capacity__title}> {route.params.categoria === "Smartphone"? 'Capacity' : 'RAM memory '}</Text>
             <View style={styles.capacity__space}>
                 <TouchableOpacity onPress={() => {
                     {setCap1(true)} {setCap2(false)} {setCap3(false)}
                 }}>
-                <Text style={cap1 === true? styles.capacity__text__active: styles.capacity__text}>64 gb</Text>
+                <Text style={cap1 === true? styles.capacity__text__active: styles.capacity__text}>
+                    {route.params.categoria === "Smartphone"? '64GB' : '8GB '}</Text>
                 </TouchableOpacity>
                 
                 <TouchableOpacity  onPress={() => {
                     {setCap1(false)} {setCap2(true)} {setCap3(false)}
                 }}>
-                <Text style={cap2 === true? styles.capacity__text__active: styles.capacity__text}>256 gb</Text>
+                <Text style={cap2 === true? styles.capacity__text__active: styles.capacity__text}> {route.params.categoria === "Smartphone"? '256GB' : '16GB '}</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity  onPress={() => {
                     {setCap1(false)} {setCap2(false)} {setCap3(true)}
                 }}>
-                <Text style={cap3 === true? styles.capacity__text__active: styles.capacity__text}>512 gb</Text>
+                <Text style={cap3 === true? styles.capacity__text__active: styles.capacity__text}> {route.params.categoria === "Smartphone"? '512GB' : '32GB '}</Text>
                 </TouchableOpacity>
             </View>
             <TouchableOpacity style={styles.cart} onPress={() => {setModalVisivel(true)}}>
@@ -82,7 +83,7 @@ export default function Produto({navigation: {goBack}}){
             <Modal visible={modalVisivel} animationType={'fade'}>
                 <Image style={styles.image__modal} source={splashCart}/>
                 <Image style={styles.modal__cart} source={iconCart}/>
-                <TouchableOpacity style={styles.modal__buttom} onPress={() =>{{setModalVisivel(false)}{addCarrinho(route.params.name, route.params.price, route.params.image)}}}>
+                <TouchableOpacity style={styles.modal__buttom} onPress={() =>{{setModalVisivel(false)}{addCarrinho(route.params.name, route.params.price, route.params.image, icon1, icon2, icon3, icon4)}}}>
                     <Text style={styles.modal__buttom__text}>Back to shopping</Text>
                 </TouchableOpacity>
             </Modal>

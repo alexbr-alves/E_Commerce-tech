@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/home';
 import Categories from '../screens/categories';
 import Catalogo from '../screens/catalogo';
-import Produto from '../screens/produto.js';
+import Produto from '../screens/produto';
 
 
 const Stack = createNativeStackNavigator();

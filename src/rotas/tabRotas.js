@@ -2,9 +2,10 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import Car from '../screens/car/index';
+
 import Seach from '../screens/seach/index';
 import User from '../screens/user';
+import CartRotas from './cartRotas';
 
 import HomeRotas from './homeRotas';
 
@@ -23,7 +24,7 @@ export default function TabRotas() {
             let iconName;
             if(route.name === 'HomeRotas'){iconName = 'home'}
             else if(route.name === 'Seach'){iconName = 'search1'}
-            else if(route.name === 'Car'){iconName = 'shoppingcart'}
+            else if(route.name === 'CartRotas'){iconName = 'shoppingcart'}
             else if(route.name === 'User'){iconName = 'user'}
             return <Icon name={iconName} color={color} size={size}/>
         }
@@ -37,7 +38,7 @@ export default function TabRotas() {
         <Tab.Screen name="Seach" component={Seach} options={{
             title: '', }} />
 
-        <Tab.Screen name="Car" component={Car} options={{
+        <Tab.Screen name="CartRotas" component={CartRotas} options={{
             title: '',  }}  />
         
         <Tab.Screen name="User" component={User} options={{

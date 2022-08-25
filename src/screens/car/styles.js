@@ -2,8 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     container: {
-        //backgroundColor: '#FDFEFF',
-
+       
     },
     title: {
         marginTop: 56,
@@ -14,11 +13,11 @@ export default StyleSheet.create({
     },
     areaProduto: {
         width: 224,
-        //height: 324,
+        height: 324,
         marginTop: 16,
         marginLeft: 20,
-        backgroundColor: '#ffffff',
-        borderRadius: 5
+        backgroundColor: '#FFFFFF',
+        borderRadius: 5,
 
     },
     areaNew: {
@@ -39,8 +38,8 @@ export default StyleSheet.create({
 
     },
     image: {
-        width: 200,
-        height: 160,
+        width: 130,
+        height: 130,
         marginTop: 43,
         alignSelf: 'center'
     },
@@ -59,5 +58,65 @@ export default StyleSheet.create({
         fontSize: 14,
         lineHeight: 17,
         color: '#0001fc'
-    }
+    },
+    descripts: {
+        marginTop: 40,
+        backgroundColor: "#FFFFFF",
+        paddingTop: 10
+    },
+    row: {
+        flexDirection: 'row',
+        marginHorizontal: 24,   
+        height: 61,
+        justifyContent: 'space-between',
+        marginVertical: 5
+    },
+    text1: {
+        fontFamily: 'Roboto_700Bold',
+        fontSize: 18, lineHeight: 21,
+        color: '#0A1034',
+        textAlign: "left"
+    },
+    text2: {
+        fontFamily: "Roboto_500Medium",
+        fontSize: 16,
+        lineHeight: 19,
+        color: '#0001fc',
+        justifyContent: 'center',
+        textAlign: 'right'
+    },
+    text3: {
+        fontFamily: 'Roboto_400Regular',
+        fontSize: 12,
+        lineHeight: 14,
+        textAlign: 'right',
+        color: '#A7A9BE'
+    },
+    textGreen: {
+        fontFamily: 'Roboto_400Regular',
+        fontSize: 12,
+        lineHeight: 14,
+        textAlign: 'right',
+        color: '#2DB57D'
+    },
+    buttom: {
+        marginTop: 32,
+        height: 53,
+        marginHorizontal: 16,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#0135EB',
+        borderRadius: 6,
+    },
+
+   buttom__text: {
+    color: '#ffffff',
+    fontFamily: 'Roboto_700Bold',
+    fontSize: 18,
+    lineHeight: 21
+   },
+   modal: {
+    height: '100%',
+    width: '100%'
+   }
 })

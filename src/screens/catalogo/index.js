@@ -54,7 +54,7 @@ export default function Catalogo({navigation: {goBack}}) {
             <TouchableOpacity style={styles.card} onPress={() => {navigation.navigate('Produto', {
                 name: item.name, price: item.price, image: item.image
             })}}>
-            <Image style={ route.params.categoria === 'Smartphone'? styles.imageSmart : styles.image} source={item.image}/>
+            <Image style={styles.image} source={item.image}/>
             <Text style={styles.name}>{item.name}</Text>
             <Text style={styles.price}>USD {item.price}</Text>
             </TouchableOpacity>

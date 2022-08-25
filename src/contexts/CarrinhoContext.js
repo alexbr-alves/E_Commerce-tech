@@ -4,16 +4,23 @@ export const CarrinhoContext = createContext({})
 
 export function InfoProvider({children}){
     const [carrinho , setCarrinho] = useState([]);
+    const [total, setTotal] = useState(0);
+    
 
-   function addCarrinho(name, price, image){
-        let novoCarrinho = []
-        novoCarrinho.push({name, price, image})
-        setCarrinho(novoCarrinho)
+    function limparCarrinho(){
+        setCarrinho([])
+        setTotal(0)
+    }
+
+     function addCarrinho(name, price, image){
+        setTotal(total + parseInt(price))
+        carrinho.unshift({name, price, image})
+       
         
     }
     return(
         <CarrinhoContext.Provider value={{
-            carrinho, addCarrinho
+            carrinho, addCarrinho, total, limparCarrinho
         }}>
             {children}
         </CarrinhoContext.Provider>

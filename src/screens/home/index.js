@@ -11,8 +11,8 @@ import iconBest from '../../../assets/images/iconBest.png'
 import iconFav from '../../../assets/images/iconFav.png'
 import iconGif from '../../../assets/images/iconGif.png'
 
-import smartphone from '../../../assets/images/smartphone.png'
-import monitor from '../../../assets/images/monitor.png'
+import smartphone from '../../../assets/images/smartphone.jpg'
+import monitor from '../../../assets/images/monitor.jpg'
 import s4 from '../../../assets/images/smartphone/s4.jpg'
 import not2 from '../../../assets/images/notebook/not2.jpg'
 
@@ -72,14 +72,18 @@ export default function Home() {
            <View style={styles.sales}>
            <Text style={styles.sales__title}>Sales</Text>
            <View style={styles.sales__row}>
-            <TouchableOpacity style={styles.sales__produtos}>
+            <TouchableOpacity style={styles.sales__produtos} onPress={() => {
+                navigation.navigate('Catalogo', {categoria: 'Smartphone'})
+            }}>
             <View style={styles.sales__desconto}>
                 <Text style={styles.sales__descontoValor} >-50%</Text>
                 </View>
                 <Image style={styles.sales__image} source={smartphone}/>
                 <Text style={styles.sales__titleProduto}>Smartphone</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.sales__produtos}>
+            <TouchableOpacity style={styles.sales__produtos} onPress={() => {
+                navigation.navigate('Catalogo', {categoria: 'Laptop'})
+            }} >
                 <View style={styles.sales__desconto}>
                 <Text style={styles.sales__descontoValor} >-40%</Text>
                 </View>
@@ -90,14 +94,18 @@ export default function Home() {
            </View>
 
            <View style={styles.sales__row}>
-            <TouchableOpacity style={styles.sales__produtos}>
+            <TouchableOpacity style={styles.sales__produtos} onPress={() => {
+                navigation.navigate('Catalogo', {categoria: 'Smartphone'})
+            }}>
             <View style={styles.sales__desconto}>
                 <Text style={styles.sales__descontoValor} >-20%</Text>
                 </View>
                 <Image style={styles.sales__image} source={s4}/>
                 <Text style={styles.sales__titleProduto}>Produtos Xiaomi</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.sales__produtos}>
+            <TouchableOpacity style={styles.sales__produtos} onPress={() => {
+                navigation.navigate('Catalogo', {categoria: 'Laptop'})
+            }} >
                 <View style={styles.sales__desconto}>
                 <Text style={styles.sales__descontoValor} >-25%</Text>
                 </View>

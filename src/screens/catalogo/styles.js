@@ -74,12 +74,6 @@ export default StyleSheet.create({
         marginTop: 32
     },
 
-    imageSmart: {
-        height: 120,
-        width: 100,
-        alignSelf: 'center',
-        marginTop: 32
-    },
     name: {
         marginLeft: 28,
         marginTop: 42,

@@ -18,9 +18,9 @@ export default function Categories({navigation: {goBack}}) {
                 <Text style={styles.itens__text} >All</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.itens} onPress={() => [
+            <TouchableOpacity style={styles.itens} onPress={() => {
                 navigation.navigate('Catalogo', {categoria: 'Laptop'})
-            ]} >
+            }} >
                 <Text style={styles.itens__text} >Computers</Text>
             </TouchableOpacity>
 
@@ -28,9 +28,9 @@ export default function Categories({navigation: {goBack}}) {
                 <Text style={styles.itens__text} >Accessories</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.itens}  onPress={() => [
+            <TouchableOpacity style={styles.itens}  onPress={() => {
                 navigation.navigate('Catalogo', {categoria: 'Smartphone'})
-            ]}>
+            }}>
                 <Text style={styles.itens__text} >Smartphones</Text>
             </TouchableOpacity>
 

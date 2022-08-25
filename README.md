@@ -24,3 +24,14 @@ mais funcionais, quem sabe no futuro eu complete conclua todas as páginas :-).
 
 https://user-images.githubusercontent.com/103543739/186740662-9a222080-f24e-4dbc-a9dc-89a3f4a7c46a.mp4
 
+
+Para usar a aplicação em um simulador, baixe o EXPO GO em sua loja de app e escaneie o QR-Code com a câmera do seu celular 
+
+
+<img src="https://user-images.githubusercontent.com/103543739/186742461-f0a69318-3a8c-4f1f-affd-4dda58c57916.jpg" 
+alt="![photo_2022-08-25_15-33-56]" 
+title="QR-CODE para o EXPO GO"
+style="width: 250px; height: 200px">
+
+
+
